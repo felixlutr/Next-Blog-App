@@ -1,6 +1,5 @@
 import { ConnectDB } from "@/lib/config/db";
 import BlogModel from "@/lib/models/BlogModel";
-import { log } from "console";
 const { NextResponse } = require("next/server");
 import { writeFile } from "fs/promises";
 const fs = require('fs')
@@ -36,7 +35,7 @@ export async function POST(request) {
 
   const blogData = {
     title: `${formData.get("title")}`,
-    description: `${formData.get("desctiption")}`,
+    description: `${formData.get("description")}`,
     category: `${formData.get("category")}`,
     author: `${formData.get("author")}`,
     image: `${imgUrl}`,
